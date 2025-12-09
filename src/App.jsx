@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import taskTable from "./assets/task-table.png";
 import interviewNotes from "./assets/interview-notes.png";
+import demoVideo from "./assets/demo_video.mp4";
 
 import designHeatmapSketch from "./assets/Figure3.png";
 import designGlyphSketch from "./assets/Figure4.png";
@@ -150,7 +151,16 @@ function DesignProcessSection() {
           visuals available at once, disliked the over-reliance on bar charts for encoding the data, wanted an additional
           dashboard-level legend, and had a difficult time making sense of our color schemes. In the next iteration of our
           design (Figures 7–10) we added a toggle for point-in-time data on the summary page to support easier onboarding
-          and reduce the risk of overwhelming the user, used [http://vrl.cs.brown.edu/color/] to rethink the original color scheme, added a 
+          and reduce the risk of overwhelming the user, used {" "}               
+          <a
+              href="http://vrl.cs.brown.edu/color/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link"
+            >
+              Colorgorical 
+          </a>
+                {" "}to rethink the original color scheme, added a 
           consistent legend in both the home summary and play view, and made some minor polishing tweaks. 
         </p>
 
@@ -499,18 +509,27 @@ export default function App() {
           <section className="card" id="data">
             <h2 className="section-title">Data</h2>
             <div className="section">
-              <p>
-                The data used in this project comes from the enTRAIN study, a research initiative designed to examine physiologic synchronyy in structured
-                parent-child interactions. The dataset includes recordings from 30 dyads, consisting of 22 typically developing and 8 children
-                with a diagnosis of Autism Spectrum Disorder (ASD). Each dyad participated in a series of structured tasks, during which multimodal
-                data were collected. The physiologic measurements consisted of cardiac activity synchrony between dyad members, which was derived
-                using Morlet wavelet analysis, yielding low-frequency and high-frequency coherence values. Sessions were also recorded using GoPro cameras.
-                Behavioral annotations were manually coded by the research team. Engagement states (supported joint engagement, coordinated joint engagement, or no engagement)
-                were utilized for this dashboard design, though other behavioral codings may also be applied.
-                <br/><br/>
-                From the raw and preprocessed streams, we derived additional metrics, including coherence episode durations (consecutive moments where coherence ≥ 0.5),
-                counts of synchronized episodes, counts of joint-engagement episodes, and joint-engagement durations.
-              </p>
+            <p>
+              The data used in this project comes from the{" "}
+              <a
+                href="https://www.media.mit.edu/projects/the-entrain-study/overview/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-link"
+              >
+                enTRAIN study
+              </a>
+              , a research initiative designed to examine physiologic synchrony in structured
+              parent-child interactions. The dataset includes recordings from 30 dyads, consisting of 22 typically developing and 8 children
+              with a diagnosis of Autism Spectrum Disorder (ASD). Each dyad participated in a series of structured tasks, during which multimodal
+              data were collected. The physiologic measurements consisted of cardiac activity synchrony between dyad members, which was derived
+              using Morlet wavelet analysis, yielding low-frequency and high-frequency coherence values. Sessions were also recorded using GoPro cameras.
+              Behavioral annotations were manually coded by the research team. Engagement states (supported joint engagement, coordinated joint engagement, or no engagement)
+              were utilized for this dashboard design, though other behavioral codings may also be applied.
+              <br /><br />
+              From the raw and preprocessed streams, we derived additional metrics, including coherence episode durations (consecutive moments where coherence ≥ 0.5),
+              counts of synchronized episodes, counts of joint-engagement episodes, and joint-engagement durations.
+            </p>
             </div>
           </section>
 
@@ -544,12 +563,19 @@ export default function App() {
         </main>
 
         <aside>
-          <section className="card">
-            <h2 className="sidebar-title">Demo Video</h2>
-            <div className="video-wrapper">
-              {/* TODO: embed demo video */}
-            </div>
-          </section>
+        <section className="card">
+          <h2 className="sidebar-title">Demo Video</h2>
+          <p>The video recording in the video view is replaced with a black screen for patient privacy.</p>
+          <div className="video-wrapper">
+            <video
+              className="demo-video"
+              controls
+            >
+              <source src={demoVideo} type="video/mp4" />
+            </video>
+          </div>
+        </section>
+
 
           <section className="card card-margin-top">
             <h2 className="sidebar-title">Project Details</h2>
