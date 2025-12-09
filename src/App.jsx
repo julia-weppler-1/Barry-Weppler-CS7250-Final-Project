@@ -303,7 +303,7 @@ function FinalDesignSection() {
           each participant led a synchronous moment (or a consecutive synchrony reading ≥ 0.5). Clicking on a bar will filter 
           the violin plot and engagement donut chart to display data where only that participant was leading (Figure 8) and 
           clicking again will remove the filter. Length was used as an effective visual encoding for quick interpretation,
-          and the color depicts categrical data (Parent or Child leading) and is consistent with other parent-child
+          and the color depicts categorical data (Parent or Child leading) and is consistent with other parent-child
           related visuals. This visual and supported interaction achieve Task 5 (Figure 1). The violin plot (Figure 7) shows
           the distribution of recorded synchrony values and includes a visual indicator for the cuttoff of "significant" synchrony,
           so that patients can understand where they spent most of their time during the recording session, and identify changes in
@@ -553,7 +553,7 @@ export default function App() {
             <div className="section">
               <p>
                 During the course of development, challenges were encountered regarding data availability and distribution,
-                technical implementation, and design consideration for user interpretation. Future work and interations of this
+                technical implementation, and design consideration for user interpretation. Future work and iterations of this
                 project will incorporate additional design feedback from domain experts, add options and technical support for 
                 additional data (such as electrodermal sensor data), and conduct a user study to guage implementation success or areas for
                 further improvement.
