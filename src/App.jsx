@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import taskTable from "./assets/task-table.png";
+import interviewNotes from "./assets/interview-notes.png";
 
 const sections = [
   { id: "motivation", label: "Motivation" },
@@ -43,19 +45,21 @@ function TaskAnalysisSection() {
               className="task-thumb-button"
               onClick={() =>
                 setActiveImage({
-                  src: "src/assets/task-table.png",
+                  src: taskTable,
                   alt: "Task analysis table summarizing domain and abstract visualization tasks.",
                   caption: "Figure 1. Task analysis table derived from the expert interview."
                 })
               }
             >
               <img
-                src="src/assets/task-table.png"
+                src={taskTable}
                 alt="Task analysis table summarizing domain and abstract visualization tasks."
                 className="task-image"
               />
             </button>
-            <figcaption>Figure 1. Task analysis table derived from the expert interview.</figcaption>
+            <figcaption>
+              Figure 1. Task analysis table derived from the expert interview.
+            </figcaption>
           </figure>
 
           <figure className="task-figure">
@@ -64,14 +68,15 @@ function TaskAnalysisSection() {
               className="task-thumb-button"
               onClick={() =>
                 setActiveImage({
-                  src: "src/assets/interview-notes.png",
+                  src: interviewNotes,
                   alt: "Excerpt from the expert interview notes used for task analysis coding.",
-                  caption: "Figure 2. Annotated interview notes used to derive tasks and prioritization."
+                  caption:
+                    "Figure 2. Annotated interview notes used to derive tasks and prioritization."
                 })
               }
             >
               <img
-                src="src/assets/interview-notes.png"
+                src={interviewNotes}
                 alt="Excerpt from the expert interview notes used for task analysis coding."
                 className="task-image"
               />
